@@ -1,7 +1,7 @@
 class CreateShouts < ActiveRecord::Migration[5.2]
   def change
     create_table :shouts do |t|
-      t.string :body
+      t.string :body, null: false
       t.references :user, foreign_key: true
 
       t.timestamps
