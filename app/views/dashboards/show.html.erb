@@ -9,3 +9,9 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<% @shouts.each do |shout| %>
+  <div>
+     <%= shout.body %>
+  </div>
+<% end %>
