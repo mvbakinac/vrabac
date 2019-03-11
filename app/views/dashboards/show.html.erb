@@ -2,8 +2,10 @@
 
 <%= form_for @shout do |form| %>
   <div class="text-field">
-    <%= form.label :shout %>
-    <%= form.text_field :body, placeholder: 'Shout here!', required: true %>
+   <%= form.fields_for :content do |content_form| %>
+     <%= form.label :shout %>
+     <%= content_form.text_field :body, placeholder: 'Shout here!', required: true %>
+   <% end %>
   </div>
   <div class="submit-field">
     <%= form.submit %>
